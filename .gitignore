@@ -6,3 +6,8 @@ js/vendor/
 scss/bourbon/
 scss/neat/
 .sass-cache
+favicon.png
+touch-icon-ipad-retina.png
+touch-icon-ipad.png
+touch-icon-iphone-retina.png
+touch-icon-iphone.png

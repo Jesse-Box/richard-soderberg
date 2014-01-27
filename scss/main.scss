@@ -1,8 +1,27 @@
+//---------Imports---------//
+
+//Normalize
+@import "normalize";
+
 //Variables
 @import "_variable";
 
 //Globals
 @import "_globals";
 
-//Mixins
-@import "_mixins";
+//Navigation
+@import "_nav";
+
+//---------Main---------//
+
+html {
+  background: url(../img/hero-image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+	color: #FFF;
+}

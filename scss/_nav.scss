@@ -1,0 +1,141 @@
+/*********************
+IMPORTS
+**********************/
+@import "_variable.scss";
+
+/*********************
+RESPONSIVE BREAKPOINTS
+**********************/
+@mixin breakpoint($point) {
+  @if $point == $large {
+    @media (max-width: $large) { @content; }
+  }
+  @else if $point == $small {
+    @media (max-width: $small) { @content; }
+  }
+}
+
+/*********************
+NAVIGATION STYLES
+**********************/
+nav {
+  width:100%;
+  @include breakpoint($small) {
+    margin: 0;
+    max-height:0;
+    overflow:hidden;
+    transition: all 0.5s ease;
+    background-color: $secondry;
+  }
+}
+
+nav ul {
+  margin:0 auto;
+  padding: 0;
+  list-style:none;
+  
+   @include breakpoint($small) {
+      margin:0;
+      padding:0;
+      width:100%;
+      box-shadow:0px 1px 3px rgba(0,0,0,.7);
+      z-index:15;
+    } 
+  
+  li {
+    float:left;
+    width: 25%;
+    position:relative;
+    z-index:1;
+    
+    @include breakpoint($small) {
+      float:none;
+      width: 100%;
+      position:relative;
+      margin:0;
+    }
+    
+    a {
+      display:block;
+      padding: $link-vertical-padding $link-horizontal-padding;
+      text-align:center;
+      color:$link-color;
+      text-decoration:none;
+      transition: all 0.1s ease;
+      
+      &:hover {
+        color:$link-color;
+        transition: all 0.2s ease;
+      }
+
+      @include breakpoint($small) {
+        display:table;
+        margin:0;
+        padding:15px 2px;
+        color:$primary;
+        border-top:1px solid $tertiary;
+        text-shadow:none;
+        width:100%;
+      }
+    }
+    
+    &:hover ul {
+      opacity:1;
+      max-height:1000px;
+      transition: all 0.3s ease;
+      
+      @include breakpoint($small) {
+        max-height:0;
+      } 
+    }
+  }
+}    
+
+/***************************
+MOBILE NAV STYLES
+***************************/
+.mobile {
+  display:none;
+  margin:0 auto;
+  padding:20px 15px;
+  position: relative;
+  color: $primary;
+  text-decoration:none;
+  line-height:0;
+  
+  @include breakpoint($small) {
+    display:table;
+  }
+}
+
+.active {
+  max-height:9000px !important;
+  margin: 0;
+  transition: all 1s ease;
+ }
+
+@include breakpoint($small) {
+  .arrow {
+    display:block;
+    background:url(../images/arrow.png) no-repeat;
+    float:right;
+    height:30px;
+    width:30px;
+    position:absolute;
+    right:25px;
+    top:10px;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      cursor:pointer;
+    }
+  }
+
+  .rotate {
+    transition: all 0.3s ease;
+    -webkit-transform:rotate(-180deg);
+      -moz-transform:rotate(-180deg);
+       -o-transform:rotate(-180deg);
+          transform:rotate(-180deg);
+  }
+}

@@ -6,12 +6,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Richard Söderberg</title>
+        <meta name="description" content="Bio goes here">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -22,12 +26,27 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
+        <section class="wrapper">
+            <header>
+                <a class="mobile" href="#">MENU</a>
+                <nav>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                  <div style="clear:both;"></div>
+                </nav>
+            </header>
+            <section class="landing-title">
+                <h1>Richard Söderberg</h1>
+            </section>
+        </section>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/nav.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
