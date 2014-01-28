@@ -9,12 +9,11 @@
 //Globals
 @import "_globals";
 
-//Navigation
-@import "_nav";
-
 //---------Main---------//
 
 html {
+	@include root-reset;
+
   background: url(../img/hero-image.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -22,6 +21,25 @@ html {
   background-size: cover;
 }
 
-h1 {
-	color: #FFF;
+//Typography
+
+p {
+	@include paragraph;
 }
+
+h3 {
+	@include subheader;
+}
+
+h2 {
+	@include header;
+}
+
+h1 {
+	@include headline;
+}
+
+//Navigation
+
+
+

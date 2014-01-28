@@ -3,14 +3,14 @@ $primary: #FFF;
 $secondry: #000;
 $tertiary: #1a1a1a;
 
-//Breakpoints
-$small: 600px;
-$large: 1200px;
+//Typography
+$helvetica-neue: "helvetica neue", helvetica, arial, sans-serif;
+$reset: 10px;
+$reset-baseline: 23px;
 
-//Navigation
-$link-color: #FFF;
-$link-hover: #FFF;
-$link-vertical-padding:20px;      /*Controls Menu top & bottom padding*/
-$link-horizontal-padding:25px;    /*Contols Menu left & right padding*/
-$menu-background: #353535;        /*Control Menu Color Scheme*/
+//Media Sizes
+$tablet: 600px;
+$desktop: 900px;
 
+//Padding & Margins
+$small: 18px;
