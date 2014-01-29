@@ -11,16 +11,6 @@
 
 //---------Main---------//
 
-html {
-	@include root-reset;
-
-  background: url(../img/hero-image.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 //Typography
 
 p {
@@ -53,7 +43,7 @@ a.nav-toggle {
 		padding: $medium 0
 	}
 
-	@media screen and (min-width: $tablet) {
+	@media screen and (min-width: $desktop) {
 		padding: $large 0
 	}
 }
@@ -65,7 +55,7 @@ a.nav-toggle {
 		padding: $medium 0
 	}
 
-	@media screen and (min-width: $tablet) {
+	@media screen and (min-width: $desktop) {
 		padding: $large 0
 	}
 
@@ -75,9 +65,43 @@ a.nav-toggle {
 	}
 }
 
-#responsive_headline {
-	display: block;
-	width: 95%;
-	margin: 0 auto;
+//Content
+
+html {
+	@include root-reset;
+  
+  background: url(../img/hero-image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 0%;
 }
 
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+
+.headline {
+	height: 100%;
+	width: 95%;
+	display: table;
+	margin: 0 auto;
+	padding-bottom: 150px;
+
+	@media screen and (min-width: $tablet) {
+		padding-bottom: 200px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding-bottom: 200px;
+	}
+
+	#responsive_headline {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+}
