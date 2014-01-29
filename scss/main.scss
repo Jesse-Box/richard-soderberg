@@ -41,5 +41,37 @@ h1 {
 
 //Navigation
 
+a.nav-toggle {
+	@include subheader;
 
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: $small 0;
+
+	@media screen and (min-width: $tablet) {
+		padding: $medium 0
+	}
+
+	@media screen and (min-width: $tablet) {
+		padding: $large 0
+	}
+}
+
+.nav-collapse li {
+	@extend a.nav-toggle;
+	
+	@media screen and (min-width: $tablet) {
+		padding: $medium 0
+	}
+
+	@media screen and (min-width: $tablet) {
+		padding: $large 0
+	}
+		
+	a {
+		color: $primary;
+		text-decoration: none;
+	}
+}
 
