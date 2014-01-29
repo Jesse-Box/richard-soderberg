@@ -68,10 +68,16 @@ a.nav-toggle {
 	@media screen and (min-width: $tablet) {
 		padding: $large 0
 	}
-		
+
 	a {
 		color: $primary;
 		text-decoration: none;
 	}
+}
+
+#responsive_headline {
+	display: block;
+	width: 95%;
+	margin: 0 auto;
 }
 
