@@ -32,44 +32,6 @@ h1 {
 	@include headline;
 }
 
-//Navigation
-
-a.nav-toggle {
-	@include subheader;
-
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: $small 0;
-
-	@media screen and (min-width: $tablet) {
-		padding: $medium 0
-	}
-
-	@media screen and (min-width: $desktop) {
-		padding: $large 0
-	}
-}
-
-.nav-collapse li {
-	@extend a.nav-toggle;
-	
-	@media screen and (min-width: $tablet) {
-		padding: $medium 0
-	}
-
-	@media screen and (min-width: $desktop) {
-		padding: $large 0
-	}
-
-	a {
-		color: $primary;
-		text-decoration: none;
-	}
-}
-
-//Content
-
 html {
 	@include root-reset;
   
@@ -81,20 +43,65 @@ html {
   background-position: 50% 0%;
 }
 
-body,
-.wrapper {
+body {
+	@include display(flex);
+
+	position: absolute;
 	height: 100%;
+	width: 100%;
+
+	.wrapper {
+		@extend body;
+		@include flex-direction(column);
+		@include flex-wrap(nowrap);
+
+	}
+}
+
+a.nav-toggle {
+	@include subheader;
+
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: $small 0;
+
+	@media screen and (min-width: $tablet) {
+		padding: $medium 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: $large 0;
+	}
+}
+
+.nav-collapse li {
+	@extend a.nav-toggle;
+
+	background-color: $secondry;
+	border-top: 2px solid $tertiary;
+
+	@media screen and (min-width: $tablet) {
+		background-color: transparent;
+		border-top: none;
+	}
+
+	a {
+		color: $primary;
+		text-decoration: none;
+	}
 }
 
 .headline {
-	height: 100%;
+	@include display(flex);
+	@include flex-direction(column);
+	@include flex-wrap (nowrap);
+	@include align-items (center);
+
+	margin: auto auto;
 	width: 95%;
-	display: table;
-	margin: 0 auto;
 
 	#responsive_headline {
-		display: table-cell;
 		width: 100%;
-		vertical-align: middle;
 	}
 }
