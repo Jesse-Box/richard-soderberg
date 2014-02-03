@@ -9,6 +9,9 @@
 //Globals
 @import "_globals";
 
+//Flexbox
+@import "_flex-box";
+
 //---------Main---------//
 
 //Typography
@@ -78,7 +81,6 @@ html {
   background-position: 50% 0%;
 }
 
-html,
 body,
 .wrapper {
 	height: 100%;
@@ -89,15 +91,6 @@ body,
 	width: 95%;
 	display: table;
 	margin: 0 auto;
-	padding-bottom: 150px;
-
-	@media screen and (min-width: $tablet) {
-		padding-bottom: 200px;
-	}
-
-	@media screen and (min-width: $desktop) {
-		padding-bottom: 200px;
-	}
 
 	#responsive_headline {
 		display: table-cell;
