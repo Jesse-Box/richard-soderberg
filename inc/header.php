@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="css/responsive-nav.css">
   <script src="js/responsive-nav.js"></script>
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/nzw6ztd.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
   <!--[if lt IE 7]>

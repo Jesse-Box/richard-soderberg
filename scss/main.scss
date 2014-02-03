@@ -35,6 +35,8 @@ h1 {
 html {
 	@include root-reset;
   
+  height: 100%;
+	width: 100%;
   background: url(../img/hero-image.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -81,7 +83,7 @@ a.nav-toggle {
 	background-color: $secondry;
 	border-top: 2px solid $tertiary;
 
-	@media screen and (min-width: $tablet) {
+	@media screen and (min-width: 400px) {
 		background-color: transparent;
 		border-top: none;
 	}
@@ -102,7 +104,6 @@ a.nav-toggle {
 	width: 100%;
 
 	h1 {
-		margin-bottom: 8rem;
 
 		@media screen and (min-width: $tablet) {
 			margin-bottom: 15rem;
