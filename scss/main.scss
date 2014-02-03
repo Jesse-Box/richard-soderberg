@@ -99,9 +99,13 @@ a.nav-toggle {
 	@include align-items (center);
 
 	margin: auto auto;
-	width: 95%;
+	width: 100%;
 
-	#responsive_headline {
-		width: 100%;
+	h1 {
+		margin-bottom: 8rem;
+
+		@media screen and (min-width: $tablet) {
+			margin-bottom: 15rem;
+		}
 	}
 }
