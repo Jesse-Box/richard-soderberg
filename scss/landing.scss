@@ -9,7 +9,12 @@
 //Globals
 @import "_globals";
 
+//Flexbox
+@import "_flex-box";
+
 //---------Main---------//
+
+//Typography
 
 p {
 	@include paragraph;
@@ -43,24 +48,38 @@ h1 {
 
 html {
 	@include root-reset;
+  
+  height: 100%;
+	width: 100%;
+  background: url(../img/hero-image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 0%;
 }
 
 body {
 	@include display(flex);
 
+	position: absolute;
+	height: 100%;
 	width: 100%;
-	background-color: $secondry;
 
 	.wrapper {
 		@extend body;
 		@include flex-direction(column);
 		@include flex-wrap(nowrap);
+
 	}
 }
 
 a.nav-toggle {
-	@include heading-6;
-	
+	@include heading-6; 
+
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
 	padding: $small 0;
 
 	@media screen and (min-width: $tablet) {
@@ -75,19 +94,22 @@ a.nav-toggle {
 .nav-collapse li {
 	@extend a.nav-toggle;
 
-	border-top: $thin;
+	background-color: $secondry;
+	border-top: 2px solid $tertiary;
 
-	@media screen and (min-width: $mobile) {
+	@media screen and (min-width: 400px) {
+		background-color: transparent;
 		border-top: none;
 	}
 
 	a {
-		@include heading-6;
+		color: $primary;
+		text-decoration: none;
 	}
 }
 
 li#last {
-	border-bottom: $thin;
+	border-bottom: 2px solid $tertiary;
 
 	@media screen and (min-width: $mobile) {
 		background-color: transparent;
@@ -97,31 +119,24 @@ li#last {
 	@media screen and (min-width: $mobile) {
 		background-color: transparent;
 		border-bottom: none;
-	}
+	}	
 }
 
-.collection-wrapper {
-	@include flex;
+.headline {
+	@include display(flex);
+	@include flex-direction(column);
+	@include flex-wrap (nowrap);
+	@include align-items (center);
 
-	.collection {
-		@include flex;
+	margin: auto auto;
+	width: 100%;
 
-		width: 100%;
-		min-height: 15rem;
-		background-color: $secondry;
-		border-top: $thin;
-
+	h1 {
+		margin-bottom: 4rem;
+		
 		@media screen and (min-width: $tablet) {
-			min-height: 30rem;
-			border-top: $regular;
+			margin-bottom: 15rem;
 		}
+	}
 
-		@media screen and (min-width: $desktop) {
-			min-height: 40rem;
-			border-top: $heavy;
-		}
-	} 
 }
-
-
-

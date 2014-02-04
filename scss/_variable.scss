@@ -9,10 +9,16 @@ $reset: 10px;
 $reset-baseline: 23px;
 
 //Media Sizes
+$mobile: 450px;
 $tablet: 600px;
-$desktop: 900px;
+$desktop: 1100px;
 
 //Padding & Margins
-$small: 18px;
-$medium: 24px;
-$large: 36px;
+$small: 24px;
+$medium: 36px;
+$large: 48px;
+
+//Border Styles
+$thin: 2px solid $tertiary;
+$regular: 3px solid $tertiary;
+$heavy: 4px solid $tertiary;
