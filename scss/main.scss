@@ -90,12 +90,10 @@ li#last {
 	border-bottom: $thin;
 
 	@media screen and (min-width: $mobile) {
-		background-color: transparent;
 		border-bottom: none;
 	}
 
 	@media screen and (min-width: $mobile) {
-		background-color: transparent;
 		border-bottom: none;
 	}
 }
@@ -108,8 +106,13 @@ li#last {
 
 		width: 100%;
 		min-height: 15rem;
-		background-color: $secondry;
 		border-top: $thin;
+		background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/hero-image.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-position: 0% 50%;
 
 		@media screen and (min-width: $tablet) {
 			min-height: 30rem;
@@ -120,8 +123,17 @@ li#last {
 			min-height: 40rem;
 			border-top: $heavy;
 		}
+
+		a {
+			width: 90%;
+			text-decoration: none;
+		}
 	} 
 }
 
+.article-wrapper {
+	@include flex;
+	
+}
 
 

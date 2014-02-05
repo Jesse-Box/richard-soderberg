@@ -28,7 +28,7 @@
 @mixin paragraph {
 	font-family: $nimbus-sans;
 	font-size: 1.6rem;
-	line-height: $reset;
+	line-height: $reset-baseline;
 	font-weight: 400;
 	text-decoration: none;
 	color: $primary;

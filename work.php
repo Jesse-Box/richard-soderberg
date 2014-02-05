@@ -3,9 +3,11 @@ $PageTitle = "WORK";
 include('inc/header.php'); ?>
 
 <section class="collection-wrapper">
-  <section class="collection" id="no-1">
-  	<h2>Obscur SS13</h2>
-  	<h3>00.00.00</h3>
+  <section class="collection">
+  	<a href="article.php">
+	  	<h2>Obscur SS13</h2>
+	  	<h3>FASHION</h3>
+  	</a>
   </section>
     <section class="collection" id="no-2">
   	<h2>Obscur SS13</h2>
