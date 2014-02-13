@@ -11,97 +11,132 @@
 
 //---------Main---------//
 
-//Typography
+@mixin background-cover($img-path, $position) {
+	background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url($img-path) no-repeat $position; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: 50% 0%;		
+}
+
+p,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+a {
+	@extend %font-rule;
+}
 
 p {
 	@include paragraph;
 }
 
+h6 {
+	@include heading-6;
+}
+
+h5 {
+	@include heading-5;
+}
+
+h4 {
+	@include heading-4;
+}
+
 h3 {
-	@include subheader;
+	@include heading-3;
 }
 
 h2 {
-	@include header;
+	@include heading-2;
 }
 
 h1 {
-	@include headline;
-}
-
-//Navigation
-
-a.nav-toggle {
-	@include subheader;
-
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: $small 0;
-
-	@media screen and (min-width: $tablet) {
-		padding: $medium 0
-	}
-
-	@media screen and (min-width: $desktop) {
-		padding: $large 0
-	}
-}
-
-.nav-collapse li {
-	@extend a.nav-toggle;
-	
-	@media screen and (min-width: $tablet) {
-		padding: $medium 0
-	}
-
-	@media screen and (min-width: $desktop) {
-		padding: $large 0
-	}
-
-	a {
-		color: $primary;
-		text-decoration: none;
-	}
-}
-
-//Content
-
-html {
-	@include root-reset;
-  
-  background: url(../img/hero-image.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: 50% 0%;
+	@include heading-1;
 }
 
 html,
 body,
-.wrapper {
+nav,
+.collection-wrapper,
+.collection {
+	width: 100%;
+}
+
+html {
+	@include root-reset;
+
+	background-color: $secondry;
+}
+
+body {
+	@include display(flex);
+
+	.wrapper {
+		@extend body;
+		@include flex-parent;
+	}
+}
+
+body#landing {
+	@include background-cover('../img/hero-image2.jpg', fixed);
+
 	height: 100%;
 }
 
-.headline {
-	height: 100%;
-	width: 95%;
-	display: table;
-	margin: 0 auto;
-	padding-bottom: 150px;
+nav {
+	@include flex-parent(row, nowrap, flex-start);
 
-	@media screen and (min-width: $tablet) {
-		padding-bottom: 200px;
-	}
+	height: 3.75rem;
+	position: fixed;
 
-	@media screen and (min-width: $desktop) {
-		padding-bottom: 200px;
-	}
+	ul {
+		float: left;
+		padding: 0;
+		margin: 0;
 
-	#responsive_headline {
-		display: table-cell;
-		width: 100%;
-		vertical-align: middle;
+		li {
+			float: left;
+			display: inline-block;
+			padding: 0 1.5625rem;
+
+			a {
+				@include link;
+				
+				color: $primary;
+			}		
+		}
 	}
 }
+
+.collection-wrapper {
+	@include flex-parent;
+
+	.collection {
+		@include flex-parent;
+		@include background-cover('../img/hero-image2.jpg', center);
+
+		min-height: 15rem;
+
+		@media screen and (min-width: $tablet) {
+			min-height: 30rem;
+		}
+
+		@media screen and (min-width: $desktop) {
+			min-height: 40rem;
+		}
+
+		a {
+			width: 100%;
+			@include link;
+		}
+	} 
+}
+
+
+
+

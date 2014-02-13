@@ -3,92 +3,159 @@
 //Variables
 @import "_variable";
 
+//Flex
+@import "_flex-box";
+
 //---------Globals---------//
 
 //Typography
-@mixin root-reset {
-	font-family: $helvetica-neue;
-	font-size: $reset;
-	line-height: $reset-baseline;
-	text-align: left;
-	font-weight: 400;
+
+%font-rule {
+	font-family: $futura;
 	color: $primary;
-	-moz-font-feature-settings: "kern=1, liga=1, dlig=1, onum=1, pnum=1"; 
-	-ms-font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "pnum" 1,"onum" 1; 
-	-o-font-feature-settings: "kern", "liga", "dlig", "onum", "pnum"; 
-	-webkit-font-feature-settings:"kern", "liga", "dlig", "onum", "pnum"; 
-	font-feature-settings:"kern", "liga", "dlig", "onum", "pnum";
+	margin: 0 0;
+	-moz-font-feature-settings: "kern=1"; 
+	-ms-font-feature-settings: "kern" 1; 
+	-o-font-feature-settings: "kern"; 
+	-webkit-font-feature-settings:"kern"; 
+	font-feature-settings:"kern";
 	text-rendering: optimizeLegibility;
 }
 
-@mixin paragraph {
-	font-family: $helvetica-neue;
-	font-size: 1.6rem;
-	line-height: $reset;
+@mixin root-reset {
+	font-size: $root-sml;
+	line-height: $body-baseline;
 	text-align: left;
-	color: $primary;
+	font-weight: 400;
+
 	@media screen and (min-width: $tablet) {
-		font-size: 1.8;
-		line-height: 2.52rem;
+		font-size: $root-med;
+		line-height: $body-baseline;
 	}
+
+	@media screen and (min-width: $tablet) {
+		font-size: $root-lge;
+		line-height: $body-baseline;
+	}		
+}
+
+@mixin paragraph {
+	font-size: $root-sml;
+	line-height: $body-baseline;
+	font-weight: 400;
+
+	@media screen and (min-width: $tablet) {
+		font-size: $root-med;
+	}
+
 	@media screen and (min-width: $desktop) {
-		font-size: 2.1rem;
-		line-height: 2.94rem;
+		font-size: $root-lge;
 	}
 }
 
-@mixin subheader {
-	font-family: $helvetica-neue;
-	font-size: 1.8rem;
-	line-height: 2.5rem;
+@mixin heading-6 {
+	font-size: $root-sml;
+	line-height: $body-baseline;
+	font-weight: 300;
+	text-transform: uppercase;
+ 
+	@media screen and (min-width: $tablet) {
+		font-size: $root-med;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: $root-lge;
+	}
+}
+
+@mixin heading-5 {
+	font-size: 1.125rem;
+	line-height: $body-baseline;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 1.1666rem;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 1.1428rem;
+	}
+}
+
+@mixin heading-4 {
+	font-size: 1.3125rem;
+	line-height: $display-baseline;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 1.3333rem;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 1.7142rem;
+	}
+}
+
+@mixin heading-3 {
+	font-size: 1.5rem;
+	line-height: $display-baseline;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 2rem;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 2.2857rem;
+	}
+}
+
+@mixin heading-2 {
+	font-size: 2.25rem;
+	line-height: $display-baseline;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 2.6666rem;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 2.8571rem;
+	}
+}
+
+@mixin heading-1 {
+	font-size: 3rem;
+	line-height: $display-baseline;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 3.3333rem;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 3.4285rem;
+	}
+}	
+
+@mixin link {
+	@include heading-6;
+
+	text-decoration: none;
 	text-align: center;
-	font-weight: 600;
-	letter-spacing: 1px;
-	color: $primary;
-	@media screen and (min-width: $tablet) {
-		font-size: 2.1rem;
-		line-height: 2.94rem;
-	}
-	@media screen and (min-width: $desktop) {
-		font-size: 2.4rem;
-		line-height: 3.36rem;
-	}
 }
 
-@mixin header {
-	font-family: $helvetica-neue;
-	font-size: 2.4rem;
-	line-height: 2.88rem;
-	text-align: center;
-	font-weight: 600;
-	letter-spacing: 1px;
-	color: $primary;
-	@media screen and (min-width: $tablet) {
-		font-size: 3.6rem;
-		line-height: 4.32rem;
-	}
-	@media screen and (min-width: $desktop) {
-		font-size: 4.8rem;
-		line-height: 5.76rem;
-	}
+//Flex-box
+@mixin flex-parent($direction: column, $wrap: nowrap, $justify-content: center, $vertical-align: center) {
+	@include display(flex);
+	@include flex-direction($direction);
+	@include flex-wrap($wrap);
+	@include justify-content($justify-content);
+	@include align-items($vertical-align);
 }
-
-@mixin headline {
-	font-family: $helvetica-neue;
-	font-size: 3.6rem;
-	line-height: 4.32rem;
-	text-align: center;
-	font-weight: 600;
-	letter-spacing: 1px;
-	color: $primary;
-	@media screen and (min-width: $tablet) {
-		font-size: 4.8rem;
-		line-height: 5.76rem;
-	}
-	@media screen and (min-width: $desktop) {
-		font-size: 6.0rem;
-		line-height: 7.2rem;
-	}
-}
-
 

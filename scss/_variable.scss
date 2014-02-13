@@ -2,17 +2,16 @@
 $primary: #FFF;
 $secondry: #000;
 $tertiary: #1a1a1a;
+$translucent: rgba(255,255,255,0.25);
 
 //Typography
-$helvetica-neue: "helvetica neue", helvetica, arial, sans-serif;
-$reset: 10px;
-$reset-baseline: 23px;
+$futura: "futura-pt", "helvetica neue", helvetica, arial, sans-serif;
+$root-sml: 16px;
+$root-med: 18px;
+$root-lge: 21px;
+$body-baseline: 140%;
+$display-baseline: 120%;
 
 //Media Sizes
 $tablet: 600px;
-$desktop: 900px;
-
-//Padding & Margins
-$small: 18px;
-$medium: 24px;
-$large: 36px;
+$desktop: 1100px;

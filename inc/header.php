@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo "RICHARD SÖDERBERG"; ?></title>
+  <title><?php echo $PageTitle; ?></title>
   <meta name="description" content="Bio goes here">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,9 +20,9 @@
   <!--Stylesheets and scripts-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/responsive-nav.css">
-  <script src="js/responsive-nav.js"></script>
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/nzw6ztd.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
   <!--[if lt IE 7]>
@@ -31,11 +31,9 @@
 
   <!-- Add your site or application content here -->
   <section class="wrapper">
-    <nav class="nav-collapse">
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">work</a></li>
-        <li><a href="#">contact</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#">about</a></li>
+      <li><a href="work.php">work</a></li>
+    </ul>
+  </nav>
