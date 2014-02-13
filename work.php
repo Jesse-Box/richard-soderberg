@@ -10,24 +10,34 @@ include('inc/header.php'); ?>
   	</a>
   </section>
     <section class="collection" id="no-2">
-  	<h2>Obscur SS13</h2>
-  	<h3>00.00.00</h3>
+    <a href="article.php">
+      <h2>Obscur SS13</h2>
+      <h3>FASHION</h3>
+    </a>
   </section>
     <section class="collection" id="no-3">
-  	<h2>Obscur SS13</h2>
-  	<h3>00.00.00</h3>
+    <a href="article.php">
+      <h2>Obscur SS13</h2>
+      <h3>FASHION</h3>
+    </a>
   </section>
     <section class="collection" id="no-4">
-  	<h2>Obscur SS13</h2>
-  	<h3>00.00.00</h3>
+    <a href="article.php">
+      <h2>Obscur SS13</h2>
+      <h3>FASHION</h3>
+    </a>
   </section>
     <section class="collection" id="no-5">
-  	<h2>Obscur SS13</h2>
-  	<h3>00.00.00</h3>
+    <a href="article.php">
+      <h2>Obscur SS13</h2>
+      <h3>FASHION</h3>
+    </a>
   </section>
     <section class="collection" id="no-6">
-  	<h2>Obscur SS13</h2>
-  	<h3>00.00.00</h3>
+    <a href="article.php">
+      <h2>Obscur SS13</h2>
+      <h3>FASHION</h3>
+    </a>
   </section>
 </section>
 <?php include('inc/footer.php'); ?>

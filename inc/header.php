@@ -20,8 +20,6 @@
   <!--Stylesheets and scripts-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/responsive-nav.css">
-  <script src="js/responsive-nav.js"></script>
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <script type="text/javascript" src="//use.typekit.net/nzw6ztd.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -33,11 +31,9 @@
 
   <!-- Add your site or application content here -->
   <section class="wrapper">
-    <nav class="nav-collapse">
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="work.php">work</a></li>
-        <li id="last"><a href="#">contact</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#">about</a></li>
+      <li><a href="work.php">work</a></li>
+    </ul>
+  </nav>

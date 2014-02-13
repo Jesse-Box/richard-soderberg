@@ -2,13 +2,10 @@
 $primary: #FFF;
 $secondry: #000;
 $tertiary: #1a1a1a;
+$translucent: rgba(255,255,255,0.25);
 
 //Typography
-$nimbus-sans: "nimbus-sans", "helvetica neue", helvetica, arial, sans-serif;
 $futura: "futura-pt", "helvetica neue", helvetica, arial, sans-serif;
-$reset: 10px;
-$reset-baseline: 23px;
-
 $root-sml: 16px;
 $root-med: 18px;
 $root-lge: 21px;
@@ -16,16 +13,5 @@ $body-baseline: 140%;
 $display-baseline: 120%;
 
 //Media Sizes
-$mobile: 450px;
 $tablet: 600px;
 $desktop: 1100px;
-
-//Padding & Margins
-$small: 24px;
-$medium: 36px;
-$large: 48px;
-
-//Border Styles
-$thin: 2px solid $tertiary;
-$regular: 3px solid $tertiary;
-$heavy: 4px solid $tertiary;

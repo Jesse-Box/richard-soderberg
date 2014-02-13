@@ -11,6 +11,26 @@
 
 //---------Main---------//
 
+@mixin background-cover($img-path, $position) {
+	background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url($img-path) no-repeat $position; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: 50% 0%;		
+}
+
+p,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+a {
+	@extend %font-rule;
+}
+
 p {
 	@include paragraph;
 }
@@ -33,107 +53,90 @@ h3 {
 
 h2 {
 	@include heading-2;
-	width: 100%;
 }
 
 h1 {
 	@include heading-1;
+}
+
+html,
+body,
+nav,
+.collection-wrapper,
+.collection {
 	width: 100%;
 }
 
 html {
 	@include root-reset;
+
+	background-color: $secondry;
 }
 
 body {
 	@include display(flex);
 
-	width: 100%;
-	background-color: $secondry;
-
 	.wrapper {
 		@extend body;
-		@include flex-direction(column);
-		@include flex-wrap(nowrap);
+		@include flex-parent;
 	}
 }
 
-a.nav-toggle {
-	@include heading-6;
-	
-	padding: $small 0;
+body#landing {
+	@include background-cover('../img/hero-image2.jpg', fixed);
 
-	@media screen and (min-width: $tablet) {
-		padding: $medium 0;
-	}
-
-	@media screen and (min-width: $desktop) {
-		padding: $large 0;
-	}
+	height: 100%;
 }
 
-.nav-collapse li {
-	@extend a.nav-toggle;
+nav {
+	@include flex-parent(row, nowrap, flex-start);
 
-	border-top: $thin;
+	height: 3.75rem;
+	position: fixed;
 
-	@media screen and (min-width: $mobile) {
-		border-top: none;
-	}
+	ul {
+		float: left;
+		padding: 0;
+		margin: 0;
 
-	a {
-		@include heading-6;
-	}
-}
+		li {
+			float: left;
+			display: inline-block;
+			padding: 0 1.5625rem;
 
-li#last {
-	border-bottom: $thin;
-
-	@media screen and (min-width: $mobile) {
-		border-bottom: none;
-	}
-
-	@media screen and (min-width: $mobile) {
-		border-bottom: none;
+			a {
+				@include link;
+				
+				color: $primary;
+			}		
+		}
 	}
 }
 
 .collection-wrapper {
-	@include flex;
+	@include flex-parent;
 
 	.collection {
-		@include flex;
+		@include flex-parent;
+		@include background-cover('../img/hero-image2.jpg', center);
 
-		width: 100%;
 		min-height: 15rem;
-		border-top: $thin;
-		background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/hero-image.jpg) no-repeat center center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-position: 0% 50%;
 
 		@media screen and (min-width: $tablet) {
 			min-height: 30rem;
-			border-top: $regular;
 		}
 
 		@media screen and (min-width: $desktop) {
 			min-height: 40rem;
-			border-top: $heavy;
 		}
 
 		a {
-			width: 90%;
-			text-decoration: none;
+			width: 100%;
+			@include link;
 		}
 	} 
 }
 
-.article-wrapper {
-	@include flex;
-	
-}
+
 
 
