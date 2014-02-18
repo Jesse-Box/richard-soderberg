@@ -24,16 +24,15 @@
   <script type="text/javascript" src="//use.typekit.net/nzw6ztd.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body>
+<body id="<?php echo $body; ?>">
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <section class="wrapper">
   <nav>
     <ul>
-      <li><a href="#">about</a></li>
-      <li><a href="work.php">work</a></li>
+      <li><a href="about.php">ABOUT</a></li>
+      <li><a href="work.php">WORK</a></li>
     </ul>
   </nav>

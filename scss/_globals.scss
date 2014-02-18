@@ -14,6 +14,7 @@
 	font-family: $futura;
 	color: $primary;
 	margin: 0 0;
+	text-align: center;
 	-moz-font-feature-settings: "kern=1"; 
 	-ms-font-feature-settings: "kern" 1; 
 	-o-font-feature-settings: "kern"; 
@@ -25,7 +26,6 @@
 @mixin root-reset {
 	font-size: $root-sml;
 	line-height: $body-baseline;
-	text-align: left;
 	font-weight: 400;
 
 	@media screen and (min-width: $tablet) {
@@ -46,6 +46,7 @@
 
 	@media screen and (min-width: $tablet) {
 		font-size: $root-med;
+		font-weight: 300;
 	}
 
 	@media screen and (min-width: $desktop) {
@@ -56,11 +57,11 @@
 @mixin heading-6 {
 	font-size: $root-sml;
 	line-height: $body-baseline;
-	font-weight: 300;
-	text-transform: uppercase;
+	font-weight: 400;
  
 	@media screen and (min-width: $tablet) {
 		font-size: $root-med;
+		font-weight: 300;
 	}
 
 	@media screen and (min-width: $desktop) {
@@ -72,10 +73,10 @@
 	font-size: 1.125rem;
 	line-height: $body-baseline;
 	font-weight: 400;
-	text-transform: uppercase;
 
 	@media screen and (min-width: $tablet) {
 		font-size: 1.1666rem;
+		font-weight: 300;
 	}
 
 	@media screen and (min-width: $desktop) {
