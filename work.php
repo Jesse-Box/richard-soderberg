@@ -2,41 +2,41 @@
 $PageTitle = "WORK";
 include('inc/header.php'); ?>
 
-<section class="collection-wrapper">
-  <section class="collection">
+<section class="work-wrapper">
+  <section class="work" id="no-1">
   	<a href="article.php">
-	  	<h2>Obscur SS13</h2>
-	  	<h4>FASHION</h4>
+      <h1>Obscur SS13</h1>
+      <h3>FASHION</h3>
   	</a>
   </section>
-    <section class="collection" id="no-2">
+    <section class="work" id="no-2">
     <a href="article.php">
-      <h2>Obscur SS13</h2>
-      <h4>FASHION</h4>
+      <h1>Obscur SS13</h1>
+      <h3>FASHION</h3>
     </a>
   </section>
-    <section class="collection" id="no-3">
+    <section class="work" id="no-3">
     <a href="article.php">
-      <h2>Obscur SS13</h2>
-      <h4>FASHION</h4>
+      <h1>Obscur SS13</h1>
+      <h3>FASHION</h3>
     </a>
   </section>
-    <section class="collection" id="no-4">
+    <section class="work" id="no-4">
     <a href="article.php">
-      <h2>Obscur SS13</h2>
-      <h4>FASHION</h4>
+      <h1>Obscur SS13</h1>
+      <h3>FASHION</h3>
     </a>
   </section>
-    <section class="collection" id="no-5">
+    <section class="work" id="no-5">
     <a href="article.php">
-      <h2>Obscur SS13</h2>
-      <h4>FASHION</h4>
+      <h1>Obscur SS13</h1>
+      <h3>FASHION</h3>
     </a>
   </section>
-    <section class="collection" id="no-6">
+    <section class="work" id="no-6">
     <a href="article.php">
-      <h2>Obscur SS13</h2>
-      <h4>FASHION</h4>
+      <h1>Obscur SS13</h1>
+      <h3>FASHION</h3>
     </a>
   </section>
 </section>

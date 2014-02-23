@@ -10,11 +10,14 @@
 
 //Typography
 
+@include font-face(HelveticaNeueLTStd-Th, '../fonts/2A014A_0_0');
+
 %font-rule {
-	font-family: $futura;
+	font-family: $helvetica-Neue;
 	color: $primary;
 	margin: 0 0;
 	text-align: center;
+	text-transform: uppercase;
 	-moz-font-feature-settings: "kern=1"; 
 	-ms-font-feature-settings: "kern" 1; 
 	-o-font-feature-settings: "kern"; 
@@ -24,128 +27,48 @@
 }
 
 @mixin root-reset {
-	font-size: $root-sml;
-	line-height: $body-baseline;
-	font-weight: 400;
-
-	@media screen and (min-width: $tablet) {
-		font-size: $root-med;
-		line-height: $body-baseline;
-	}
-
-	@media screen and (min-width: $tablet) {
-		font-size: $root-lge;
-		line-height: $body-baseline;
-	}		
+	font-size: $root;
+	line-height: $body-baseline;	
 }
 
 @mixin paragraph {
-	font-size: $root-sml;
+	font-size: $root;
 	line-height: $body-baseline;
-	font-weight: 400;
-
-	@media screen and (min-width: $tablet) {
-		font-size: $root-med;
-		font-weight: 300;
-	}
-
-	@media screen and (min-width: $desktop) {
-		font-size: $root-lge;
-	}
 }
 
 @mixin heading-6 {
-	font-size: $root-sml;
+	font-size: 1.2rem;
 	line-height: $body-baseline;
 	font-weight: 400;
- 
-	@media screen and (min-width: $tablet) {
-		font-size: $root-med;
-		font-weight: 300;
-	}
-
-	@media screen and (min-width: $desktop) {
-		font-size: $root-lge;
-	}
 }
 
 @mixin heading-5 {
-	font-size: 1.125rem;
+	font-size: 1.4rem;
 	line-height: $body-baseline;
-	font-weight: 400;
-
-	@media screen and (min-width: $tablet) {
-		font-size: 1.1666rem;
-		font-weight: 300;
-	}
-
-	@media screen and (min-width: $desktop) {
-		font-size: 1.1428rem;
-	}
 }
 
 @mixin heading-4 {
-	font-size: 1.3125rem;
+	font-size: 1.6rem;
 	line-height: $display-baseline;
-	font-weight: 300;
-	text-transform: uppercase;
-
-	@media screen and (min-width: $tablet) {
-		font-size: 1.3333rem;
-	}
-
-	@media screen and (min-width: $desktop) {
-		font-size: 1.7142rem;
-	}
 }
 
 @mixin heading-3 {
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	line-height: $display-baseline;
-	font-weight: 300;
-	text-transform: uppercase;
-
-	@media screen and (min-width: $tablet) {
-		font-size: 2rem;
-	}
-
-	@media screen and (min-width: $desktop) {
-		font-size: 2.2857rem;
-	}
 }
 
 @mixin heading-2 {
-	font-size: 2.25rem;
+	font-size: 2.1rem;
 	line-height: $display-baseline;
-	font-weight: 300;
-	text-transform: uppercase;
-
-	@media screen and (min-width: $tablet) {
-		font-size: 2.6666rem;
-	}
-
-	@media screen and (min-width: $desktop) {
-		font-size: 2.8571rem;
-	}
 }
 
 @mixin heading-1 {
-	font-size: 3rem;
+	font-size: 2.4rem;
 	line-height: $display-baseline;
-	font-weight: 300;
-	text-transform: uppercase;
-
-	@media screen and (min-width: $tablet) {
-		font-size: 3.3333rem;
-	}
-
-	@media screen and (min-width: $desktop) {
-		font-size: 3.4285rem;
-	}
 }	
 
 @mixin link {
-	@include heading-6;
+	@include paragraph;
 
 	text-decoration: none;
 	text-align: center;

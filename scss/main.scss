@@ -3,6 +3,9 @@
 //Normalize
 @import "normalize";
 
+//Bourbon Font Face
+@import "_font-face";
+
 //Variables
 @import "_variable";
 
@@ -11,7 +14,7 @@
 
 //---------Main---------//
 
-@mixin background-cover($img-path, $opacity, $position ) {
+@mixin work-background($img-path, $opacity, $position ) {
 	background: linear-gradient(rgba(0,0,0,$opacity),rgba(0,0,0,$opacity)), url($img-path) no-repeat $position; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -20,15 +23,7 @@
 	background-position: 50% 0%;		
 }
 
-//%cover-center {
-//	-webkit-background-size: cover;
-//	-moz-background-size: cover;
-//	-o-background-size: cover;
-//	background-size: cover;
-//	background-position: 50% 0%;
-//}
-
-@mixin background-image($body) {
+@mixin body-background($body) {
 	@if $body == home {
 		background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url('../img/hero-image2.jpg') no-repeat fixed; 
 		-webkit-background-size: cover;
@@ -39,7 +34,7 @@
 	}
 
 	@else if $body == about {
-		background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url('../img/about-image3.jpg') no-repeat fixed; 
+		background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('../img/about-image3.jpg') no-repeat fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -61,9 +56,12 @@ h2,
 h1,
 a {
 	@extend %font-rule;
+	
+	width: 100%;
 
-	width: inherit;
-	min-width: 300px;
+	@media screen and (min-width: $tablet) {
+		width: inherit;
+	}	
 }
 
 p {
@@ -84,7 +82,6 @@ h4 {
 
 h3 {
 	@include heading-3;
-	min-width: 300px;
 }
 
 h2 {
@@ -103,8 +100,8 @@ html,
 body,
 nav,
 ul,
-.collection-wrapper,
-.collection,
+.work-wrapper,
+.work,
 .article-wrapper,
 .article-title,
 .wrapper {
@@ -123,36 +120,31 @@ body {
 }
 
 body#about {
-	@include background-image(about);
+	@include body-background(about);
 
 	height: 100% !important;
 }
 
 body#home {
-	@include background-image(home);
+	@include body-background(home);
 
 	height: 100% !important;
 }
 
 nav {
-	//@include flex-parent(row, flex-start, flex-start);
 	@include flex-parent(row);
 
-	height: 3.75rem;
 	position: fixed;
 	z-index: 9999;
 
 	ul {
-		@include flex-parent(row, nowrap, space-between, center);
-
-		float: left;
 		padding: 0;
 		margin: 0;
+		text-align: left;
 
 		li {
-			float: left;
 			display: inline-block;
-			padding: 0 1.5625rem;
+			padding: 1.71428571rem;
 
 			a {
 				@include link;
@@ -160,46 +152,27 @@ nav {
 				color: $primary;
 			}		
 		}
+
+		li:last-child {
+			float: right;
+		}
 	}
 }
 
-.collection-wrapper {
-	@include flex-parent;
-
-	.collection {
-		@include flex-parent;
-		@include background-cover('../img/hero-image2.jpg', 0.25, center);
-
-		min-height: 15rem;
-
-		@media screen and (min-width: $tablet) {
-			min-height: 30rem;
-		}
-
-		@media screen and (min-width: $desktop) {
-			min-height: 40rem;
-		}
-
-		a {
-			width: 100%;
-			@include link;
-		}
-	} 
-}
-
+//ABOUT PAGE
 .about-wrapper {
 	@include flex-parent;
 
 	height: 100%;
 
-	#about {
-		@include flex-parent(column, nowrap, flex-start, flex-start);
+	.about {
+		@include flex-parent(column, nowrap, center, flex-start);
 
 		padding: 0 1.25rem;
 		margin: 0 auto;
 
 		@media screen and (min-width: $tablet) {
-			width: 30rem;
+			width: 42rem;
 		}
 
 		h3 {
@@ -209,19 +182,46 @@ nav {
 		p {
 			margin-bottom: 0.625rem;
 		}
+
+		.email {
+			margin-bottom: 0rem;
+		}
 	}
 }
 
+//WORK PAGE
+.work-wrapper {
+	@include flex-parent;
+
+	.work {
+		@include flex-parent;
+		@include work-background('../img/hero-image2.jpg', 0.25, center);
+
+		height: 20rem;
+
+		@media screen and (min-width: $tablet) {
+			height: 30rem;
+		}
+
+		a {
+			@include link;
+
+			width: 100%;
+		}
+	} 
+}
+
+//WORK INNER PAGE
 .article-wrapper {
 	@include flex-parent;
 
 	.article-title {
 		@include flex-parent;
 
-		min-height: 30rem;
+		height: 15rem;
 
-		@media screen and (min-width: $desktop) {
-			min-height: 40rem;
+		@media screen and (min-width: $tablet) {
+			height: 30rem;
 		}		
 	}
 
@@ -234,12 +234,16 @@ nav {
 		}
 
 		@media screen and (min-width: $desktop) {
-			width: 50%;
+			width: 60%;
 		}
 
 		img {
 			width: 100%;
 		}
+	}
+
+	a {
+		margin-bottom: 3.5rem;
 	}
 }
 

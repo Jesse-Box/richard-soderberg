@@ -32,7 +32,7 @@
   <!-- Add your site or application content here -->
   <nav>
     <ul>
-      <li><a href="about.php">ABOUT</a></li>
       <li><a href="work.php">WORK</a></li>
+      <li><a href="about.php">ABOUT</a></li>
     </ul>
   </nav>
