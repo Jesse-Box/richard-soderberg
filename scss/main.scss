@@ -190,25 +190,24 @@ nav {
 }
 
 //WORK PAGE
-.work-wrapper {
-	@include flex-parent;
+#wrapper {
+	width: 100%;
 
-	.work {
-		@include flex-parent;
-		@include work-background('../img/hero-image2.jpg', 0.25, center);
+	.item {
+		height: 600px;
+		background-color: red;
 
-		height: 20rem;
-
-		@media screen and (min-width: $tablet) {
-			height: 30rem;
-		}
-
-		a {
-			@include link;
-
+		img {
 			width: 100%;
 		}
-	} 
+
+		h3 {
+			margin: 0 auto;
+		}
+	}
+	.featured {
+		height: auto;
+	}
 }
 
 //WORK INNER PAGE
