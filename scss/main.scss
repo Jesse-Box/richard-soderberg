@@ -192,21 +192,15 @@ nav {
 //WORK PAGE
 #wrapper {
 	width: 100%;
+	margin-top: 2rem;
 
 	.item {
-		height: 600px;
-		background-color: red;
+		height: auto;
 
 		img {
 			width: 100%;
+			margin-bottom: 2rem;
 		}
-
-		h3 {
-			margin: 0 auto;
-		}
-	}
-	.featured {
-		height: auto;
 	}
 }
 
