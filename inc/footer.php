@@ -4,9 +4,9 @@
   <script src="js/jquery.flexverticalcenter.js"></script>
   <script type="text/javascript"> //Grid-a-licious trigger
     $(document).ready(function () {
-      $("#wrapper").gridalicious({
+      $(".work-wrapper").gridalicious({
       		gutter: 20,
-          width: 300,
+          width: 325,
           animate: true,
           animationOptions: {
                   speed: 200,
