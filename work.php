@@ -3,41 +3,36 @@ $PageTitle = "WORK";
 include('inc/header.php'); ?>
 
 <section class="work-wrapper">
-  <section class="work" id="no-1">
-  	<a href="article.php">
-      <h1>Obscur SS13</h1>
-      <h3>FASHION</h3>
-  	</a>
-  </section>
-    <section class="work" id="no-2">
-    <a href="article.php">
-      <h1>Obscur SS13</h1>
-      <h3>FASHION</h3>
-    </a>
-  </section>
-    <section class="work" id="no-3">
-    <a href="article.php">
-      <h1>Obscur SS13</h1>
-      <h3>FASHION</h3>
-    </a>
-  </section>
-    <section class="work" id="no-4">
-    <a href="article.php">
-      <h1>Obscur SS13</h1>
-      <h3>FASHION</h3>
-    </a>
-  </section>
-    <section class="work" id="no-5">
-    <a href="article.php">
-      <h1>Obscur SS13</h1>
-      <h3>FASHION</h3>
-    </a>
-  </section>
-    <section class="work" id="no-6">
-    <a href="article.php">
-      <h1>Obscur SS13</h1>
-      <h3>FASHION</h3>
-    </a>
-  </section>
+  <a href="article.php" class="item">
+    <img src="img/work/work-01.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-02.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-03.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-04.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-05.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-06.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-07.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-08.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-09.jpg" id="grayscale">
+  </a>
+  <a href="article.php" class="item">
+    <img src="img/work/work-10.jpg" id="grayscale">
+  </a>          
 </section>
+
 <?php include('inc/footer.php'); ?>

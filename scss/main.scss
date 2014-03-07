@@ -47,6 +47,7 @@
 	}
 }
 
+//TYPOGRAPHY
 p,
 h6,
 h5,
@@ -57,7 +58,7 @@ h1,
 a {
 	@extend %font-rule;
 	
-	width: 100%;
+	width: $full-width;
 
 	@media screen and (min-width: $tablet) {
 		width: inherit;
@@ -105,13 +106,13 @@ ul,
 .article-wrapper,
 .article-title,
 .wrapper {
-	width: 100%;
+	width: $full-width;
 }
 
 html {
 	@include root-reset;
 
-	height: 100%;
+	height: $full-width;
 	background-color: $secondry;
 }
 
@@ -122,20 +123,17 @@ body {
 body#about {
 	@include body-background(about);
 
-	height: 100% !important;
+	height: $full-width !important;
 }
 
 body#home {
 	@include body-background(home);
 
-	height: 100% !important;
+	height: $full-width !important;
 }
 
+//NAVIGATION
 nav {
-	@include flex-parent(row);
-
-	position: fixed;
-	z-index: 9999;
 
 	ul {
 		padding: 0;
@@ -144,13 +142,7 @@ nav {
 
 		li {
 			display: inline-block;
-			padding: 1.71428571rem;
-
-			a {
-				@include link;
-				
-				color: $primary;
-			}		
+			padding: $primary-spacing;				
 		}
 
 		li:last-child {
@@ -159,11 +151,25 @@ nav {
 	}
 }
 
+a {
+	@include link;
+	
+	color: $primary;
+	opacity: 0.75;
+	transition: 0.75s;
+  -webkit-transition: 0.75s;
+  -moz-transition: 0.75s;
+}
+
+a:hover {
+	opacity: 1;
+}	
+
 //ABOUT PAGE
 .about-wrapper {
 	@include flex-parent;
 
-	height: 100%;
+	height: $full-width;
 
 	.about {
 		@include flex-parent(column, nowrap, center, flex-start);
@@ -183,7 +189,7 @@ nav {
 			margin-bottom: 0.625rem;
 		}
 
-		.email {
+		p:last-child {
 			margin-bottom: 0rem;
 		}
 	}
@@ -191,29 +197,65 @@ nav {
 
 //WORK PAGE
 .work-wrapper {
-	@include flex-parent;
+	margin-bottom: 7.5rem;
 
-	.work {
-		@include flex-parent;
-		@include work-background('../img/hero-image2.jpg', 0.25, center);
+	.item {
 
-		height: 20rem;
+		img#grayscale {
+			margin: 0 auto $primary-spacing auto;
 
-		@media screen and (min-width: $tablet) {
-			height: 30rem;
+			@media screen and (min-width: $desktop) {
+				width: $full-width;
+			  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+			  opacity: 0.33;
+			  filter: gray;
+			  -webkit-filter: grayscale($full-width);
+			  transition: 0.5s;
+			  -webkit-transition: 0.5s;
+			  -moz-transition: 0.5s;
+		  }
 		}
 
-		a {
-			@include link;
-
-			width: 100%;
+		img#grayscale:hover,
+		img#grayscale:active {
+			@media screen and (min-width: $desktop) {
+			  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+			  -webkit-filter: grayscale(0%);
+			  opacity: 1;
+			}
 		}
-	} 
+	}
+}
+
+.hover {
+-webkit-user-select: none;
+-webkit-touch-callout: none;        
 }
 
 //WORK INNER PAGE
 .article-wrapper {
 	@include flex-parent;
+
+	.article-pictures {
+		width: 90%;
+
+		@media screen and (min-width: $tablet) {
+			width: 90%;
+		}
+
+		@media screen and (min-width: $desktop) {
+			width: 60%;
+		}
+
+		img {
+			width: $full-width;
+			margin-bottom: $primary-spacing;
+		}
+
+		img:last-child {
+			margin-bottom: 0;
+		}
+	}
 
 	.article-title {
 		@include flex-parent;
@@ -225,25 +267,13 @@ nav {
 		}		
 	}
 
-	.article-pictures {
-		width: 90%;
-		margin-bottom: 3.125rem;
+	.footer-nav {
+		margin-bottom: 7.5rem;
 
-		@media screen and (min-width: $tablet) {
-			width: 90%;
+		.footer-btn {
+			padding: $primary-spacing; 
+			margin: $primary-spacing;
 		}
-
-		@media screen and (min-width: $desktop) {
-			width: 60%;
-		}
-
-		img {
-			width: 100%;
-		}
-	}
-
-	a {
-		margin-bottom: 3.5rem;
 	}
 }
 
