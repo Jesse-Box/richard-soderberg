@@ -15,10 +15,5 @@
       });
     });
 	</script>
-  <script>
-    $(document).ready(function() {
-      $('#center').flexVerticalCenter();
-    });
-  </script>
 </body>
 </html>

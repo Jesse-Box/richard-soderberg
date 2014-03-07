@@ -15,7 +15,7 @@ include('inc/header.php'); ?>
 		The eye for details in the materials and skin creates 
 		a unique image using different ideas on how to present 
 		them through analog photography.</p>
-		<p class="email">Email at contact@richardsoderberg.com</p>
+		<p>Email at <a href="mailto:contact@richardsoderberg.com">contact@richardsoderberg.com</a></p>
 	</article>
 </section>
 <?php include('inc/footer.php'); ?>
